@@ -32,7 +32,6 @@ export const Login = (props) => {
 
     const handlePassword = (e) => {
         e.preventDefault()
-
         if(password.length > 4) {
             setPassErr(false)
         }
@@ -61,7 +60,7 @@ export const Login = (props) => {
     
             let config = {
                 method: "post",
-                url: "http://localhost:8000/api/login",
+                url: `${process.env.REACT_APP_BASE_URL}/api/login`,
                 headers: {
                     "Content-Type": "application/json"
                 },

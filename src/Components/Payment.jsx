@@ -21,7 +21,7 @@ const Payment = (props) => {
     const handlePayment = async (e) => {
        
     
-        const API_URL = 'http://localhost:8000'
+        const API_URL = `${process.env.REACT_APP_BASE_URL}`
         const orderUrl = `${API_URL}/payment`;
         const response = await Axios.post(orderUrl,{
             amount: plan,

@@ -27,7 +27,6 @@ const Routes = () => {
                 <PrivateRoute exact path = "/profiles" Component={ProfilePage}/>
                 <PrivateRoute path = "/browse" exact component = {Browse}/>
                 <PrivateRoute path = "/video/:id" exact component = {VideoPlayer}/>
-                
                 <PrivateRoute exact path = "/myList" Component={MyList}/>
                 <Route exact  render={()=><Error/>}/>
             </Switch>
