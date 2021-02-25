@@ -31,10 +31,9 @@ const getProfilesFail = (err) => {
 
 export const getProfiles = (token) => (dispatch) => {
   dispatch(getProfilesReq());
-
   let config = {
     method: "get",
-    url: "http://localhost:8000/api/auth/getProfiles",
+    url: `${process.env.REACT_APP_BASE_URL}/api/auth/getProfiles`,
     headers: {
       Authorization: "Bearer " + token,
     },
@@ -67,10 +66,9 @@ const addProfileFail = (err) => {
 
 export const addProfile = ({ name, token }) => (dispatch) => {
   dispatch(addProfileReq());
-
   let config = {
     method: "post",
-    url: "http://localhost:8000/api/auth/addProfile",
+    url:`${process.env.REACT_APP_BASE_URL}/api/auth/addProfile`,
     headers: {
       Authorization: "Bearer " + token,
       "Content-Type": "application/json",

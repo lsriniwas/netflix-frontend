@@ -30,13 +30,16 @@ export const registerReset = () => {
 
 export const makeRegisterRequest = (userDetails) => (dispatch) => {
   dispatch(registerRequest());
+  console.log(userDetails)
   axios
     .post(`${process.env.REACT_APP_BASE_URL}/api/register`, userDetails)
     .then((res) => {
+      console.log("Hello payment success")
       dispatch(registerSuccess(res.data.message));
       dispatch(makeLoginRequest(userDetails));
     })
     .catch((err) => {
+      console.log("Hello payment success")
       dispatch(registerFailure(err.response.data.message));
     });
 };

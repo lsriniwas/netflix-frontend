@@ -31,7 +31,7 @@ export const registerUser = (userDetails) => (dispatch) => {
   dispatch(registerRequest());
 
   const config = {
-    url: "http://localhost:8000/api/register",
+    url: `${process.env.REACT_APP_BASE_URL}/api/register`,
     method: "post",
     data: userDetails,
   };
