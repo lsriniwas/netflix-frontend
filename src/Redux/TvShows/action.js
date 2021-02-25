@@ -25,9 +25,7 @@ const getSeriesFailure = () => {
 };
 
 export const makeGetSeriesRequest = () => (dispatch) => {
-  console.log("called");
   dispatch(getSeriesRequest());
-
   axios
     .get(`${process.env.REACT_APP_BASE_URL}/api/tvshow`)
     .then((res) => dispatch(getSeriesSuccess(res.data)))

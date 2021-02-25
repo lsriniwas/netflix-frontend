@@ -48,7 +48,7 @@ const Payment = (props) => {
                
               }
             } catch (err) {
-              console.log(err.message);
+              alert(err.message);
             }
           },
           theme: {

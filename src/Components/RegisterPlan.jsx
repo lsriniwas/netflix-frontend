@@ -9,7 +9,6 @@ const RegisterPlan = (props) => {
     const [plan, setPlan] = useState(199)
     const {email,password} = props.location.state
     const handleContinue = () => {
-        console.log("hello",email,password)
         history.push({
             pathname: '/signup/payment',
             state: { plan,email,password },
